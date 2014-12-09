@@ -62,7 +62,7 @@
    
             }           
             <li>
-            @Html.Partial("~/Views/Home/AddComment.cshtml", null, new ViewDataDictionary())
+            @Html.Partial("~/Views/Home/AddComment.cshtml", new MvcApplication1.Models.AddCommentModel() { User = new MvcApplication1.Models.UserModel()}, new ViewDataDictionary())
                @* <div class = "add-comit">
                 <form action = "/home/addcomment" method = "post">
                 <textarea name="comment" placeholder="Ваш комментарий" class="txt-area"></textarea>

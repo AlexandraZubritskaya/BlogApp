@@ -9,6 +9,14 @@ namespace MvcApplication1.Models
     {
         public string Username { get; set; }
         public int Age { get; set; }
+        public string Country { get; set; }
+        public ICollection<string> Countries
+        {
+            get {
+                return Repository.CountriesRepository.Countries;
+            }
+        }
 
+        public HttpPostedFileWrapper Avatar { get; set; }
     }
 }

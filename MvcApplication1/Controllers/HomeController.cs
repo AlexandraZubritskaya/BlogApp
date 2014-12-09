@@ -40,6 +40,10 @@ namespace MvcApplication1.Controllers
         [HttpPost]
         public ActionResult Index(AddCommentModel model)
         {
+            if (model.User != null && model.User.Avatar != null && model.User.Avatar.ContentLength > 0)
+            {
+                model.User.Avatar.SaveAs("C:/Users/Сашка/Documents/Temp/" +model.User.Avatar.FileName);
+            }
             if (!string.IsNullOrWhiteSpace(model.Comment)) {
                
                 CommentRepository.Comments.Add(model.Comment);
