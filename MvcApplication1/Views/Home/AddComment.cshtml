@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+
+@model MvcApplication1.Models.AddCommentModel
+<div class = "add-comit">
+                <form action = "@Url.Action("Index", "Home")" method = "post">
+                @Html.TextAreaFor(m => m.Comment, new { placeholder = "Ваш комментарий", @class="txt-area"})
+              @Html.TextBoxFor(m=>m.User.Username)
+              @Html.TextBoxFor(m=>m.User.Age)
+               @* <textarea name="comment" placeholder="Ваш комментарий" class="txt-area"></textarea>*@
+                <div class = "btn">
+                <button class ="btn-cancel">Отмена</button>
+                <button class ="btn-save">Добавить</button>
+
+                </div>
+              </form>
+                </div>

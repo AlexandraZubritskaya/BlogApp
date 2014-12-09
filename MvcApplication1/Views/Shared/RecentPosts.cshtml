@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+@model MvcApplication1.Models.CommentsModel
+<div id="mostpop">
+                	<div class="lthead"><span>Последние комментарии</span></div>
+                    <!--ltposts starts-->
+                    <div class="ltposts">
+                    <ul>
+                    
+                    @foreach (var item in Model.Items) { 
+     
+                        <li>
+                        <p class = "post" >@item.Date.ToString("D")<span>@item.Date.ToString("hh:mm")</span></p>
+                        <p><a href="@item.URL">@item.Text</a></p>
+                        </li>
+                    }
+                        
+                    </ul>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>

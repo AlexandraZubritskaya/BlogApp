@@ -1,0 +1,198 @@
+﻿
+@*@model MvcApplication1.Models.LayoutModel*@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Travel blog</title>
+<link rel="stylesheet" type="text/css" href=" ~/Content/css/style.css" />
+<style type="text/css"> 
+ img, div, input { behavior: url("iepngfix.htc") }
+</style>
+<script type="text/javascript">
+
+ </script>
+</head>
+<body>
+<!--wrapper starts-->
+<div id="wrapper">
+	<!--container starts-->
+    	<div id="container">
+        	<!--ltcontent starts-->
+        	<div id="ltcontent">
+            	<!--hdlogo starts-->
+                <div id="hdlogo" align="center">
+                	<img src="~/Content/images/topbanner.jpg" alt=""/>
+                </div>
+                <!--hdlogo ends-->
+                <!--about starts-->
+                <div id="about">
+                	<div class="lthead" align="center"><span class="tphead">Автор</span></div>
+                    <div class="ltdetail">
+                    Добро пожаловать в блог о путешествиях, природе и культуре "Дорогами Срединного Пути"! 
+                    </div>
+                    <div class="link">
+                    	Связаться с нами
+                    </div>
+                </div>             
+                <!--about ends--> 
+				 <div class="ltgap"></div>
+                <!--RecentPosts-->
+                <div id="mostpop">
+                	<div class="lthead"><span>Последние комментарии</span></div>
+                    <!--ltposts starts-->
+                    <div class="ltposts">
+                    <ul>
+                    
+                    
+    
+                        <li>
+                        <p class = "post" >@DateTime.Now.Date.ToString("D")<span>@DateTime.Now.Date.ToString("hh:mm")</span></p>
+                        <p>
+                        <a href = "#">Comment Body </a>
+                        @*<a href="@Url.Action("Byld", "Comment", new {id = item.ID})">@item.Text</a>*@
+                       @* @Html.RouteLink("Comments", "article", new { Controller = "Comment", Action = "ByID", id = item.ID})*@
+
+                        </p>
+                        </li>
+                    
+                          <li>
+                        <p class = "post" >@DateTime.Now.Date.ToString("D")<span>@DateTime.Now.Date.ToString("hh:mm")</span></p>
+                        <p>
+                        <a href = "#">Comment Body </a>
+                        @*<a href="@Url.Action("Byld", "Comment", new {id = item.ID})">@item.Text</a>*@
+                       @* @Html.RouteLink("Comments", "article", new { Controller = "Comment", Action = "ByID", id = item.ID})*@
+
+                        </p>
+                        </li>
+
+                          <li>
+                        <p class = "post" >@DateTime.Now.Date.ToString("D")<span>@DateTime.Now.Date.ToString("hh:mm")</span></p>
+                        <p>
+                        <a href = "#">Comment Body </a>
+                        @*<a href="@Url.Action("Byld", "Comment", new {id = item.ID})">@item.Text</a>*@
+                       @* @Html.RouteLink("Comments", "article", new { Controller = "Comment", Action = "ByID", id = item.ID})*@
+
+                        </p>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+                @*@Html.Action("Recent","Comment")*@
+                @*@Html.Partial("RecentPosts", Model.RecentComments) *@        
+                <!--RecentPosts-->  
+                 <div class="ltgap"></div>
+                 <!-- search starts-->
+                 <div id="search">
+                 	<div class="input">
+                 	<input type="text" name="search" class="textbox"/> <input type="submit" value="Поиск" class="searchBut" />
+                    </div>
+                 </div>
+                 <!--search ends-->
+                 <div class="ltgap"></div>
+                 <!--about starts-->
+                <div id="feeds">
+                	<div class="lthead" align="center"><span class="tphead">Подписывайтесь</span></div>
+                    <div class="ltdetail">
+                    <ul>
+                    	<li><a href="#">БЛОГ «ПОДМОСКОВЬЕ»</a></li>
+						<li><a href="#">Достопримечательности</a></li>
+                    </ul>
+                    </div>
+                </div>             
+                <!--about ends--> 
+                 <div class="ltgap"></div>
+                <!--about starts-->
+                <div id="social">
+                	<div class="lthead"><span>Социальные сети</span></div>
+                    <div>
+                    <a href="#"><img src="~/Content/images/link1.png" alt="" /></a>
+                    <a href="#"><img src="~/Content/images/link2.png" alt="" /></a>
+                    <a href="#"><img src="~/Content/images/link3.png" alt="" /></a>
+                    <a href="#"><img src="~/Content/images/link4.png" alt="" /></a>
+                    <a href="#"><img src="~/Content/images/link5.png" alt="" /></a>
+                    </div>
+                </div>             
+                <!--about ends--> 
+            </div>
+            <!--ltcontent ends-->
+            <!--rtcontent starts-->
+            <div id="rtcontent">
+           		<!--publish starts-->
+                <div class="publish"> Иванов Иван Иванович</div>
+                <!--publish ends-->
+                <!--head starts-->
+                <div class="head" >Блог о путешествиях</div>
+                <!--head ends-->
+                <!--tagln starts-->
+                <div class="tagln">
+                 <span class="italics">Дорогами
+				Срединного Пути</span>
+                </div> 
+                <!--tagln ends-->
+                <!--menulinks starts -->
+                <div id="menulinks">
+	            	<ul>
+    	    	        <li><a href="#">Россия</a></li>
+    		            <li><a href="#">Беларусь</a></li>
+	        	        <li><a href="#">Азия</a></li>
+                        <li><a href="#">Европа</a></li>
+                	    <li><a href="#" class="scrcast">Разное</a></li>
+	                </ul>
+    	        </div>
+                <div class="clear"></div>
+            <!--menulinks ends -->
+            <!--documentarty starts-->
+           
+            <div class="rtboxbg">&nbsp;</div>
+            <!--documentary ends-->
+            <div class="gap"></div>
+
+
+         @RenderBody()
+            <div class="gap"></div>  
+           
+            </div>
+            <!--rtcontent ends-->
+            <div class="clear"></div>
+            <br />
+            <!--feature starts-->
+           <div id="features">
+            	<div id="tranbox">
+                	<div class="tranhead">С Наступающим 2015 годом!!!</div>
+                    <span class="trapost"> Sasha| Декабрь 4, 2014</span>
+                     <div class="tracontent">
+                	Желаю вам в году грядущем неба чистого, солнца ясного, ветра теплого, здоровья крепкого, друзей надежных, работы интересной и любви искренней. Пусть в приходящем году вам всегда улыбается фортуна, в ваш дом прилетит птица счастья и поселится в нем навсегда, а добрые сказочные феи исполнят все ваши желания.
+                </div>
+                </div>
+                
+                <div id="video">
+                	<img src="~/Content/images/rozhdestvo_501x334.jpg" alt=""/>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--features ends-->
+            <!--footer starts-->
+            	<div id="footer">
+                	<div class="copy">
+                    &copy; 2014
+                    </div>
+                   <!-- <div class="flinks">
+                    	<span><a href="#">HOME</a></span><span class="separator"> | </span>
+                        <span><a href="#">ABOUT</a></span><span class="separator"> | </span>
+                        <span><a href="#">REEL</a></span><span class="separator"> | </span>
+                        <span><a href="#">SCREENCASTS</a></span><span class="separator"> | </span>
+                        <span><a href="#">CONTACT</a></span><span class="separator">  </span>
+                        <!--<span><a href="http://vectorart.org">Design by Vector</a></span>--!>
+                    </div>-->
+                </div>
+            <!--footer ends-->
+        </div>
+    <!--container starts-->
+</div>
+<!--wrapper ends-->
+</body>
+</html>
+
