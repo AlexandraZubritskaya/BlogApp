@@ -27,17 +27,21 @@
 
 <div class="document">
             <div>&nbsp;</div>
+            @if(Model.Post != null)
+                {
             	<div class="dochead">
-                	<span class="dhead">@Model.Title</span>
+                
+                	<span class="dhead">@Model.Post.Title</span>
                 </div>
                 <div>
-                    <span class="postt">  @Model.Username | @Model.Date.ToString("D")</span>
+                    <span class="postt">  Sasha | @Model.Post.DataCreated.Date.ToString("D")</span>
 		        </div>
                 <div class="dcontent">
-                 @Html.Raw(Model.Body)
+                 @Html.Raw(Model.Post.Body)
                 	
                    
                 </div>
+                }
 	                <div class="bubble" align="right">
     	            	<span>205 коммент.
 
@@ -48,7 +52,8 @@
  <div class = "comments">
             <h2 class = "comm">Комментарии</h2>
             <ul class = "list-comment">
-            @foreach (string  item in Model.Comments)
+            @if(Model.Post != null){
+            foreach (string  item in Model.Comments)
             { 
             <li>
                     <div class = "avatar"><img src="~/Content/images/668.jpg"  width = "100px" height = "100px" alt=""/></div>
@@ -60,7 +65,7 @@
                     </div>
                 </li>
    
-            }           
+            } }          
             
                 </ul></div>
                 <div class = "comments">

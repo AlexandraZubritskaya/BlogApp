@@ -30,23 +30,34 @@ namespace MvcApplication1.Controllers
        //     return RedirectToAction("index", "home");
         //}
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(string title)
         {
-            string query = Request.QueryString["Foo"]; // Запрос в  адресной строке после знака?
-            var model = new History();
-            return View(model);
+            //string query = Request.QueryString["Foo"]; // Запрос в  адресной строке после знака?
+            if (title == null)
+            {
+                title = "This is my first title";
+            }
+            var readers = new DataReaders();
+            return View(readers.GetHistory(title));
         }
 
         [HttpPost]
-        [ValidateInput(false)] // можно вводить html теги
+        //[ValidateInput(false)] // можно вводить html теги
         public ActionResult Index(History model)
         {
+            
+              var  title = "This is my first title";
+            
             if (model.NewComment != null && ModelState.IsValid)
             
             {
-                CommentRepository.Comments.Add(model.NewComment.Comment);
+                var readers = new DataReaders();
+                readers.AddComment(title, model.NewComment.Comment);
+                //CommentRepository.Comments.Add(model.NewComment.Comment);
+                ModelState.Clear();
+                return View(readers.GetHistory(title));
             }
-            return View(new History());
+            return View(model);
         }
     }
 }

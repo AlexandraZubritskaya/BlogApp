@@ -14,8 +14,8 @@ namespace MvcApplication1.Models
         //[RegularExpression(@"\d+")] 
         public string Comment { get; set; }
 
-        [Range(1,100)]
-        public int? Age { get; set; }
+        //[Range(1,100)]
+        
         //public UserModel User { get; set; }
 
         

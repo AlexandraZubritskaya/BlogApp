@@ -58,3 +58,5 @@ D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\System.Web.WebPages.Razor.xml
 D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\obj\Debug\MvcApplication1.csprojResolveAssemblyReference.cache
 D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\obj\Debug\MvcApplication1.dll
 D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\obj\Debug\MvcApplication1.pdb
+D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\EntityFramework.SqlServer.dll
+D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\EntityFramework.SqlServer.xml
