@@ -51,7 +51,7 @@
             @foreach (string  item in Model.Comments)
             { 
             <li>
-                    <div class = "avatar"><img src="~/Content/images/avatar.jpg"  width = "100px" height = "100px" alt=""/></div>
+                    <div class = "avatar"><img src="~/Content/images/668.jpg"  width = "100px" height = "100px" alt=""/></div>
                     <div class = "comment-text"></div>
                     <a href = "#"></a>
                     <p class = "post">@DateTime.Now.Date.ToString("D")<span>  @DateTime.Now.ToString("hh:mm")</span></p>
@@ -61,8 +61,10 @@
                 </li>
    
             }           
-            <li>
-            @Html.Partial("~/Views/Home/AddComment.cshtml", new MvcApplication1.Models.AddCommentModel() { User = new MvcApplication1.Models.UserModel()}, new ViewDataDictionary())
+            
+                </ul></div>
+                <div class = "comments">
+            @Html.Partial("~/Views/Home/AddComment.cshtml")
                @* <div class = "add-comit">
                 <form action = "/home/addcomment" method = "post">
                 <textarea name="comment" placeholder="Ваш комментарий" class="txt-area"></textarea>
@@ -74,8 +76,7 @@
               </form>
                 </div>*@
                 
-                </li>
-                </ul></div>
+                </div>
     
                 </body>
 </html>

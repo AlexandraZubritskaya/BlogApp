@@ -70,8 +70,6 @@
                         <p class = "post" >@DateTime.Now.Date.ToString("D")<span>@DateTime.Now.Date.ToString("hh:mm")</span></p>
                         <p>
                         <a href = "#">Comment Body </a>
-                        @*<a href="@Url.Action("Byld", "Comment", new {id = item.ID})">@item.Text</a>*@
-                       @* @Html.RouteLink("Comments", "article", new { Controller = "Comment", Action = "ByID", id = item.ID})*@
 
                         </p>
                         </li>
@@ -80,6 +78,8 @@
 
                     <div class="clear"></div>
                 </div>
+
+
                 @*@Html.Action("Recent","Comment")*@
                 @*@Html.Partial("RecentPosts", Model.RecentComments) *@        
                 <!--RecentPosts-->  

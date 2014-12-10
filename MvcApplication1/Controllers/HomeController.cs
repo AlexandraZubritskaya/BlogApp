@@ -38,16 +38,13 @@ namespace MvcApplication1.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(AddCommentModel model)
+        [ValidateInput(false)] // можно вводить html теги
+        public ActionResult Index(History model)
         {
-            if (model.User != null && model.User.Avatar != null && model.User.Avatar.ContentLength > 0)
+            if (model.NewComment != null && ModelState.IsValid)
+            
             {
-                model.User.Avatar.SaveAs("C:/Users/Сашка/Documents/Temp/" +model.User.Avatar.FileName);
-            }
-            if (!string.IsNullOrWhiteSpace(model.Comment)) {
-               
-                CommentRepository.Comments.Add(model.Comment);
-                
+                CommentRepository.Comments.Add(model.NewComment.Comment);
             }
             return View(new History());
         }

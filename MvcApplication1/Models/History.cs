@@ -42,5 +42,6 @@ namespace MvcApplication1.Models
             }
         
         }
+        public AddCommentModel NewComment { get; set; }
     }
 }
