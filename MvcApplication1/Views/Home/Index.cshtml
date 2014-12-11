@@ -34,7 +34,7 @@
                 	<span class="dhead">@Model.Post.Title</span>
                 </div>
                 <div>
-                    <span class="postt">  Sasha | @Model.Post.DataCreated.Date.ToString("D")</span>
+                    <span class="postt">  Sasha | @Model.Post.DateCreated.Date.ToString("D")</span>
 		        </div>
                 <div class="dcontent">
                  @Html.Raw(Model.Post.Body)
@@ -47,8 +47,9 @@
 
     	            	</span>
         	        </div>
+                    
             </div>
-
+            <div class="rtboxbg">&nbsp;</div>
  <div class = "comments">
             <h2 class = "comm">Комментарии</h2>
             <ul class = "list-comment">

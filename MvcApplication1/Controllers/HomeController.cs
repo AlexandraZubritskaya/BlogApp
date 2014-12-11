@@ -35,18 +35,18 @@ namespace MvcApplication1.Controllers
             //string query = Request.QueryString["Foo"]; // Запрос в  адресной строке после знака?
             if (title == null)
             {
-                title = "This is my first title";
+                title = "А. де Сент Экзепюри «Маленький принц»";
             }
             var readers = new DataReaders();
-            return View(readers.GetHistory(title));
+            return View( readers.GetHistory(title));
         }
 
         [HttpPost]
         //[ValidateInput(false)] // можно вводить html теги
         public ActionResult Index(History model)
+       
         {
-            
-              var  title = "This is my first title";
+            var title = "А. де Сент Экзепюри «Маленький принц»";
             
             if (model.NewComment != null && ModelState.IsValid)
             
@@ -57,6 +57,7 @@ namespace MvcApplication1.Controllers
                 ModelState.Clear();
                 return View(readers.GetHistory(title));
             }
+
             return View(model);
         }
     }

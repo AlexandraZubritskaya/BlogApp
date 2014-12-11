@@ -103,7 +103,7 @@ img{border:0;}
 
 /*right content details*/
 .document{
-	height:500px;
+	
 	background-color:#fff;
 	width: 615px;
 }
@@ -158,7 +158,7 @@ img{border:0;}
 	background:url(../images/bubble.png) no-repeat bottom right;
 	height:39px;
 	margin-right: 15px;
-	margin-top:60px;
+	margin-top:20px;
 }
 
 .bubble span{
@@ -455,6 +455,7 @@ img{border:0;}
     padding:20px 0px 20px;
     margin-bottom:10px;
     border-bottom: 1px solid #6b664f;
+    width: 570px;
   
     
 }

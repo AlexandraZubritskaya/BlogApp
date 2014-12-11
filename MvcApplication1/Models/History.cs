@@ -18,7 +18,7 @@ namespace MvcApplication1.Models
             this.comments = comments;
         }
        
-        public History() 
+       public History() 
         {
             post = new PostModel("This is an article title",
                 "<p> nfdkfldfk </p>", DateTime.Now);
