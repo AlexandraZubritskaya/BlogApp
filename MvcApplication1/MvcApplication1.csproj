@@ -47,6 +47,12 @@
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -137,6 +143,7 @@
     <Compile Include="Models\AddCommentModel.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\CommentsItemModel.cs" />
+    <Compile Include="Models\EFContext.cs" />
     <Compile Include="Models\History.cs" />
     <Compile Include="Models\HomeMode.cs" />
     <Compile Include="Models\CommentsModel.cs" />
@@ -163,7 +170,7 @@
     <Content Include="Content\images\link3.png" />
     <Content Include="Content\images\link4.png" />
     <Content Include="Content\images\link5.png" />
-    <Content Include="Content\images\ltfeature.jpg" />
+    <Content Include="Content\images\NewFolder1\ltfeature.jpg" />
     <Content Include="Content\images\rozhdestvo_501x334.jpg" />
     <Content Include="Content\images\rtboxbg.jpg" />
     <Content Include="Content\images\rtboxbg1.jpg" />
