@@ -13,6 +13,7 @@ namespace MvcApplication1.Models
         [StringLength(100)] // максимальная длина строки
         //[RegularExpression(@"\d+")] 
         public string Comment { get; set; }
+       
 
         //[Range(1,100)]
         

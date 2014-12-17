@@ -60,3 +60,7 @@ D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\obj\Debug\MvcApplication1.dll
 D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\obj\Debug\MvcApplication1.pdb
 D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\EntityFramework.SqlServer.dll
 D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\EntityFramework.SqlServer.xml
+D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\MongoDB.Bson.dll
+D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\MongoDB.Driver.dll
+D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\MongoDB.Bson.xml
+D:\BSUiR\ПФИТ\Mysite\Git\MvcApplication1\bin\MongoDB.Driver.xml

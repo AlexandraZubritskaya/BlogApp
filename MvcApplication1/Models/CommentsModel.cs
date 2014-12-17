@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MvcApplication1.Models
 {
-    public class CommentsModel
+  /*  public class CommentsModel
     {
         public CommentsModel() 
         {
@@ -16,5 +16,5 @@ namespace MvcApplication1.Models
             Items.Add(new RecentComments());
         }
         public ICollection<RecentComments> Items { get; set; }
-    }
+    }*/
 }

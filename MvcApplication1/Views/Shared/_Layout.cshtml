@@ -1,5 +1,6 @@
 ﻿
 @*@model MvcApplication1.Models.LayoutModel*@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -31,9 +32,9 @@
                     <div class="ltdetail">
                     Добро пожаловать в блог о путешествиях, природе и культуре "Дорогами Срединного Пути"! 
                     </div>
-                    <div class="link">
+                    <a href = @Url.Action("Next", "Home")><div class="link">
                     	Связаться с нами
-                    </div>
+                    </div></a>
                 </div>             
                 <!--about ends--> 
 				 <div class="ltgap"></div>

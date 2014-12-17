@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.Mvc;
 using MvcApplication1.Models;
 using MvcApplication1.Models.Repository;
@@ -65,11 +66,18 @@ namespace MvcApplication1.Controllers
          [HttpGet]
         public ActionResult Index(string title)
         {
-            
+            FormsAuthentication.SetAuthCookie("Rika", true);
+            //var ticker = new FormsAuthenticationTicket(2, "Rika", DateTime.Now, DateTime.Now.AddMonths(1), true, 
+            //    String.Empty);
+            //var encTicket = FormsAuthentication.Encrypt(ticker);
+            //var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encTicket);
+            //cookie.Expires = DateTime.Now.AddMonths(1);
+            //var cookie = FormsAuthentication.GetAuthCookie("Rika", true);
+            //Response.Cookies.Add(cookie);
             if (title == null)
             {
                 title = "А. де Сент Экзепюри «Маленький принц»";
-            }
+            } 
             using (var ctx = new EFContext())
             {
                 var post = ctx.Posts.Where(p => p.Title == title).FirstOrDefault();
@@ -80,6 +88,7 @@ namespace MvcApplication1.Controllers
                     foreach (var item in post.Comments)
                     {
                         commentModel.Add(item.Body);
+                        
                     }
                 }
 
@@ -89,6 +98,7 @@ namespace MvcApplication1.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         //[ValidateInput(false)] // можно вводить html теги
         public ActionResult Index(History model)
        
@@ -98,7 +108,7 @@ namespace MvcApplication1.Controllers
             if (model.NewComment != null && ModelState.IsValid)
             
             {
-                using (var ctx = new EFContext())
+                using (var ctx = new EFContext())         //Оператор using гарантирует вызов метода Dispose
                 {
                     var post = ctx.Posts.Where(p => p.Title == title).FirstOrDefault();
                     if (post != null)
@@ -111,6 +121,11 @@ namespace MvcApplication1.Controllers
                 return RedirectToAction("Index", new { title = title });
             }
 
+            return View(model);
+        }
+        public ActionResult Next() 
+        {
+            var model = new History();
             return View(model);
         }
     }

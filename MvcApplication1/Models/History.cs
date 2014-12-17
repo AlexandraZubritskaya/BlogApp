@@ -25,11 +25,7 @@ namespace MvcApplication1.Models
             comments = CommentRepository.Comments;
 
         }
-        
-        //public string Title {get; set;}
-        //public string Body { get; set; }  
-        //public DateTime Date { get; set; }
-        //public string Username { get; set; }
+
         public PostModel Post
         {
             get
@@ -44,5 +40,7 @@ namespace MvcApplication1.Models
             }
         }
         public AddCommentModel NewComment { get; set; }
+
+        
     }
 }

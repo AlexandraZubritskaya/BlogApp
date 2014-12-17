@@ -22,9 +22,9 @@ namespace MvcApplication1.Controllers
         //{
         //   return new ContentResult() { Content = "#" + seoUrl + "#" }; 
         //           }
-        // public ContentResult Index()
-        // {
-        //    return new ContentResult() { Content = "Hello" };
-        //}
+         public ContentResult Index()
+         {
+            return new ContentResult() { Content = "Hello" };
+        }
     }
 }
