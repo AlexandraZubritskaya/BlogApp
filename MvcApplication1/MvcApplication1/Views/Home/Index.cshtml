@@ -1,0 +1,82 @@
+﻿
+@model MvcApplication1.Models.History
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Travel blog</title>
+<link rel="stylesheet" type="text/css" href=" ~/Content/css/style.css" />
+<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="css/style6.css" />
+<![endif]-->
+    <!--[if IE 7]>
+        <link href="css/style7.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+<style type="text/css"> 
+ 
+ /* Design by Studio7designs.com */
+
+ 
+ img, div, input { behavior: url("iepngfix.htc") }
+</style>
+<script type="text/javascript">
+
+ </script>
+</head>
+<body>
+
+<div class="document">
+            <div>&nbsp;</div>
+            	<div class="dochead">
+                	<span class="dhead">@Model.Title</span>
+                </div>
+                <div>
+                    <span class="postt">  @Model.Username | @Model.Date.ToString("D")</span>
+		        </div>
+                <div class="dcontent">
+                 @Html.Raw(Model.Body)
+                	
+                   
+                </div>
+	                <div class="bubble" align="right">
+    	            	<span>205 коммент.
+
+    	            	</span>
+        	        </div>
+            </div>
+
+ <div class = "comments">
+            <h2 class = "comm">Комментарии</h2>
+            <ul class = "list-comment">
+            @foreach (var item in Model.Comments)
+            { 
+            <li>
+                    <div class = "avatar"><img src="~/Content/images/avatar.jpg"  width = "100px" height = "100px" alt=""/></div>
+                    <div class = "comment-text"></div>
+                    <a href = "#">@item.Username</a>
+                    <p class = "post">@item.Date.ToString("D")<span>  @item.Date.ToString("hh:mm")</span></p>
+                    <div class = "text-block">
+                     @item.Comment
+                    </div>
+                </li>
+   
+            }           
+            <li>
+                <div class = "add-comit">
+                <textarea name="" placeholder="Ваш комментарий" class="txt-area"></textarea>
+                <div class = "btn">
+                <button class ="btn-cancel">Отмена</button>
+                <button class ="btn-save">Добавить</button>
+
+                </div>
+              
+                </div>
+                
+                </li>
+                </ul></div>
+                
+  
+
+                </body>
+</html>
+
